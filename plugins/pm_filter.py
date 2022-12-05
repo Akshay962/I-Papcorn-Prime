@@ -183,6 +183,10 @@ async def pm_next_page(bot, query):
                 InlineKeyboardButton("NEXT ⏩", callback_data=f"pmnext_{req}_{key}_{n_offset}")
             ],
         )
+
+    btn.insert(0, [
+        InlineKeyboardButton('𝐇𝐎𝐖 𝐓𝐎 𝐎𝐏𝐄𝐍 𝐋𝐈𝐍𝐊', url='https://youtu.be/cTVJuad-hMU')
+    ])
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -263,6 +267,9 @@ async def next_page(bot, query):
                 InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
+    btn.insert(0, [
+        InlineKeyboardButton('𝐇𝐎𝐖 𝐓𝐎 𝐎𝐏𝐄𝐍 𝐋𝐈𝐍𝐊', url='https://youtu.be/cTVJuad-hMU')
+    ])
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -1349,6 +1356,9 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
+        btn.insert(0, [
+        InlineKeyboardButton('𝐇𝐎𝐖 𝐓𝐎 𝐎𝐏𝐄𝐍 𝐋𝐈𝐍𝐊', url='https://youtu.be/cTVJuad-hMU')
+    ])
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
@@ -1463,6 +1473,9 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         btn.append(
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
+        btn.insert(0, [
+            InlineKeyboardButton('𝐇𝐎𝐖 𝐓𝐎 𝐎𝐏𝐄𝐍 𝐋𝐈𝐍𝐊', url='https://youtu.be/cTVJuad-hMU')
+    ])
     imdb = await get_poster(search) if IMDB else None
     TEMPLATE = IMDB_TEMPLATE
     if imdb:
